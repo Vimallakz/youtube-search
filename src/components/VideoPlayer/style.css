@@ -1,0 +1,19 @@
+
+.image-card {
+  width: 500px;
+  height: 280px;
+  object-fit: fill;
+  border-radius: 4px;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.video-card {
+  width: 500px;
+  height: 280px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}

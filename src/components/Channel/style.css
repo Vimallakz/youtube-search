@@ -1,0 +1,11 @@
+.channel-info {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.channel-info .avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 100px;
+}
