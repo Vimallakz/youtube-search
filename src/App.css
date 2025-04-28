@@ -1,9 +1,51 @@
 .youtube-search-component {
-  height: 100%;
+  min-height: 100%;
+  background: rgb(12, 18, 27);
+  /* background: linear-gradient(90deg, #62dab4, #10bed4); */
+  background: #c9d6ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #c9d6ff, #e2e2e2); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.youtube-search-component .header {
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  background: inherit;
+  top: 0;
+  z-index: 99;
+}
+
+.youtube-search-component .header .brand-logo {
+  height: 100px;
+  position: fixed;
+  top: 0px;
+  left: 0px
+}
+
+.youtube-search-component .header .search-box {
+  padding: 15px 10px;
+  width: 50%;
+  margin: auto;
+  outline: none;
+  border: none;
+  transition: all 0.5s ease; /* Smooth transition */
+  border-radius: 25px;
+}
+
+.youtube-search-component .header .search-box.center {
+  transform: translate(25vw, 40vh);
+}
+
+.youtube-search-component .header .search-box.top {
+  transform: translate(25vw, 2vh);
 }
 
 .youtube-search-component .card-container {
   display: flex;
-  flex-direction: column;
   row-gap: 16px;
+  margin-top: 100px;
+}
+
+.youtube-search-component .card-container.list {
+  flex-direction: column;
 }
