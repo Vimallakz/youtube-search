@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import VideoPlayer from '../VideoPlayer';
 import './style.css';
 import { timeAgo } from '../../utils/datefns';
@@ -6,19 +6,9 @@ import Channel from '../Channel';
 
 
 const VideoCard = ({ item }) => {
-  const [isHover, setHover] = useState(false);
-
-  const handleMouseEnter = () => {
-    setHover(true);
-  }
-
-  const handleMouseLeave = () => {
-    setHover(false);
-  }
-
   return (
-    <section className='card' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <VideoPlayer thumbnails={item?.snippet?.thumbnails} videoId={item.id.videoId} isHover={isHover} />
+    <section className='card'>
+      <VideoPlayer thumbnails={item?.snippet?.thumbnails} videoId={item.id.videoId} />
       <div className='card-info'>
         <div className='title'>{item?.snippet.title}</div>
         <div className='description'>{timeAgo(item?.snippet?.publishTime)}</div>

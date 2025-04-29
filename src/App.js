@@ -48,7 +48,7 @@ const App = () => {
   return (
     <div className='youtube-search-component'>
       <div className='header'>
-        <img src="./logo.png" alt="logo" className='brand-logo'/>
+        <img src="./youtube-search/logo.png" alt="logo" className='brand-logo'/>
         <form onSubmit={handleSearch}>
           <input type='text' name='searchBox' className={`search-box ${data.items.length ? 'top' : 'center'}`} placeholder='Search ...'
             value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />

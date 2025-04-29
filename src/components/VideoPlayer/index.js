@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 
-const VideoPlayer = ({ thumbnails, videoId, isHover }) => {
+const VideoPlayer = ({ thumbnails, videoId }) => {
+  const [isHover, setHover] = useState(false);
+
+  const handleMouseEnter = () => {
+    setHover(true);
+  }
+
+  const handleMouseLeave = () => {
+    setHover(false);
+  }
+
   return (
-    <div className='tw-pr-4'>
+    <div className='tw-pr-4' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       {!isHover ? <img src={thumbnails.high.url} alt="" className='image-card' /> :
         <iframe
           title="yt-video"
