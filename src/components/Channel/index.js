@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import './style.css';
 
 const Channel = ({ id, name }) => {
 
   const [logo, setLogo] = useState(null);
 
-  useEffect(() => {
-    fetchChannelLogo();
-  }, [id]);
-
-  const fetchChannelLogo = async() => {
+  const fetchChannelLogo = useCallback(async() => {
     try {
       const url  = `https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${id}&key=${process.env.REACT_APP_API_KEY}`;
       const response = await fetch(url);
@@ -24,7 +20,11 @@ const Channel = ({ id, name }) => {
       console.log('>>>>>>>>', error);
     }
 
-  }
+  }, [id]);
+
+  useEffect(() => {
+    fetchChannelLogo();
+  }, [id, fetchChannelLogo]);
 
   return (
     <div className='channel-info'>

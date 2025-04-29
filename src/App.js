@@ -44,6 +44,7 @@ const App = () => {
     fetchVideos();
   };
 
+  console.log('>>>>>>>>>>', loading);
   return (
     <div className='youtube-search-component'>
       <div className='header'>

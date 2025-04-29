@@ -6,7 +6,6 @@ import Channel from '../Channel';
 
 
 const VideoCard = ({ item }) => {
-
   const [isHover, setHover] = useState(false);
 
   const handleMouseEnter = () => {
