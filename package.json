@@ -1,5 +1,6 @@
 {
   "name": "youtube-search",
+  "homepage": "/youtube-search",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
