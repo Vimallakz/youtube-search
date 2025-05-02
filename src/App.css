@@ -48,4 +48,59 @@
 
 .youtube-search-component .card-container.list {
   flex-direction: column;
+  align-items: center;
+}
+
+
+@media only screen and (min-width: 240px) and (max-width: 479px)  {
+  .card-container {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 639px) {
+  .card-container {
+    width: 480px;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+  .card-container {
+    width: 640px;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .card-container {
+    width: 768px;
+    margin: auto;
+
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .card-container {
+    width: 1024px;
+    margin: auto;
+    align-items: flex-start !important;
+  }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1439px) {
+  .card-container {
+    width: 1280px;
+    margin: auto;
+    align-items: flex-start !important;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .card-container {
+    width: 85%;
+    margin: auto;
+    align-items: flex-start !important;
+  }
 }

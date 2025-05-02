@@ -13,7 +13,7 @@ const VideoPlayer = ({ thumbnails, videoId }) => {
   }
 
   return (
-    <div className='tw-pr-4' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       {!isHover ? <img src={thumbnails.high.url} alt="" className='image-card' /> :
         <iframe
           title="yt-video"

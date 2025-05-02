@@ -1,12 +1,16 @@
 .card {
   display: flex;
   padding: 8px;
+  gap: 12px;
+  width: 100%;
 }
 
 .card:hover {
   background: rgb(191 191 191 / 10%);
 }
 .card .card-info {
+  flex: 1;
+
   display: flex;
   flex-direction: column;
   row-gap: 8px;
@@ -18,4 +22,49 @@
 .card .card-info .description {
   font-size: 12px;
   color: #606060;
+}
+
+@media only screen and (min-width: 1024px) {
+  .card {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+@media only screen and (min-width: 240px) and (max-width: 479px)  {
+  .card .image-card, .card .video-card, .card .card-info {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 639px) {
+  .card .image-card, .card .video-card, .card .card-info {
+    width: 400px;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+  .card .image-card, .card .video-card, .card .card-info {
+    width: 440px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .card .image-card, .card .video-card, .card .card-info {
+    width: 460px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .card .image-card, .card .video-card, .card .card-info {
+    width: 500px;
+  }
 }

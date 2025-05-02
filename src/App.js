@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import VideoCard from './components/Card/index';
+import BrandLogo from './assets/images/logo.png'
 import './App.css'
 
 const App = () => {
@@ -48,7 +49,7 @@ const App = () => {
   return (
     <div className='youtube-search-component'>
       <div className='header'>
-        <img src="./youtube-search/logo.png" alt="logo" className='brand-logo'/>
+        <img src={BrandLogo} alt="logo" className='brand-logo'/>
         <form onSubmit={handleSearch}>
           <input type='text' name='searchBox' className={`search-box ${data.items.length ? 'top' : 'center'}`} placeholder='Search ...'
             value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />

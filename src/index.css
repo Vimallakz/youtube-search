@@ -24,3 +24,7 @@ code {
 .tw-pr-4 {
   padding-right: 16px;
 }
+
+.tw-w-full {
+  width: 100%;
+}
