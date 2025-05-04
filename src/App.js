@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import VideoCard from './components/Card/index';
 import BrandLogo from './assets/images/logo.png'
 import './App.css'
+import InfiniteScroll from './components/InfiniteScroll';
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -30,11 +31,12 @@ const App = () => {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const { items, pageInfo, nextPageToken } = await response.json();
-      setData({ items, pageInfo, nextPageToken })
+      setData({ items: [...data.items, ...items], pageInfo, nextPageToken })
     } catch(error) {
       console.log(error);
     } finally {
       setLoading(false);
+      setIsNewSearch(false);
     }
   }
 
@@ -45,7 +47,10 @@ const App = () => {
     fetchVideos();
   };
 
-  console.log('>>>>>>>>>>', loading);
+  useEffect(() => {
+    console.log('>>>ITEMS LENGTH>>>', data.items.length);
+  }, [data])
+
   return (
     <div className='youtube-search-component'>
       <div className='header'>
@@ -56,7 +61,9 @@ const App = () => {
         </form>
       </div>
       <div className='card-container list'>
-        {data.items?.map(item => <VideoCard item={item} />)}
+        <InfiniteScroll hasMore={!!data.nextPageToken} next={fetchVideos} loading={loading}>
+          {data.items?.map(item => <VideoCard item={item} />)}
+        </InfiniteScroll>
       </div>
 
     </div>
