@@ -19,9 +19,13 @@ To run tests
 
 `npm test`
 
+## Demo
+
+[A demo is worth a thousand words](https://vimallakz.github.io/youtube-search/)
+
 
 ## Problem Statement
-Create a page where the user can search for a video using the YouTubeAPI. 
+Create a page where the user can search for a video using the YouTubeAPI.
 Web app should let users:
 * Search for videos via keywords.
 * It should show a list of matching results with video image/thumbnail and title of the video (Feelfree to add more info).
@@ -31,7 +35,7 @@ Web app should let users:
 #### Youtube API
 * Visit: https://developers.google.com/youtube/v3
 * Use your google account to get the API key
-* Docs: https://developers.google.com/youtube/v3/docsRules: 
+* Docs: https://developers.google.com/youtube/v3/docsRules:
 
 ## What we are looking for:
 
